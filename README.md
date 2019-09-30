@@ -21,15 +21,15 @@ With this architecture generated images were blurry, contours were not well defi
 
 # Our Architecture
 
-# Spectral Normalization
+## Spectral Normalization
 In order to increase the quality of the images and the stability of the training we introduced spectral normalization in the discriminator.
 Using the base architecture with the one-hot encoding on multiple labels with the addition of the spectral normalization in the discriminator we were able to obtain images more defined. Faces were better defined, but the network was not able to distinguish properly between labels: we needed a way for the network to differentiate more between labels.
 
-# Categorical Batch Normalization
+## Categorical Batch Normalization
 Categorical batch normalization is a type of batch normalization that changes the normalization parameters based on the input category. It is applied to the generator and for every combination of labels we assign a different category; for example the generation of females with black hair and of females with non black hair will use different batch normalization parameters.This approach has the advantage that the network differentiate more between the various labels but it also adds more parameters to compute, slowing down the training.
 Using the base architecture with the one-hot encoding on multiple labels and the conditional batch normalization we obtained results respecting more the labels, but images were not as defined as when using spectral normalization, but these approaches can be combined.
 
-# Final Architecture
+## Final Architecture
 Our final architecture is the base architecture modified to use more than one label both in the generator and in the discriminator using the one-hot encoding, with some additional features:
 * More convolutions of the label in the generator
 * Categorical batch normalization in the generator
