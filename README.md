@@ -1,5 +1,5 @@
 # CGANCelebA
-Conditional GAN project for the Deep Learning course of 2019 held by professor Elisa RIcci, done by Filippo Bordon, Simone Zamboni and me.
+Conditional GAN project for the Deep Learning course of 2019 held by professor Elisa Ricci, done by Filippo Bordon, Simone Zamboni and me.
 Our objective in this project was to design a GAN able to produce images of faces conditioned with different labels. More specifically we wanted to take an already existing architecture, modify it and obtain better results generating faces conditioned by some specifics attributes.
 
 # Dataset
