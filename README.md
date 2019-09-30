@@ -2,10 +2,10 @@
 Conditional GAN project for the Deep Learning course of 2019 held by professor Elisa Ricci, done by Filippo Bordon, Simone Zamboni and me.
 Our objective in this project was to design a GAN able to produce images of faces conditioned with different labels. More specifically we wanted to take an already existing architecture, modify it and obtain better results generating faces conditioned by some specifics attributes.
 
-# Dataset
+## Dataset
 For our project we used CelebA, a widely used dataset for faces, that contains more than 200k faces of famous people. The images used are cropped on the faces, and re-sized at 64x64 pixels. Each one of these images has 40 binary labels.
 
-# Starting architecture
+## Starting architecture
 As starting architecture a modified version of the DCGAN that uses one label in the one-hot encoding was used.
 The generator takes as input the noise vector and a vector of two elements where the label is encoded in one-hot fashion.
 Both inputs are deconvoluted separately, concatenated and then deconvoluted together until a 64x64 image is obtained.
